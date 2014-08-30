@@ -39,7 +39,7 @@ $CPANBASE = "$twikiLibPath/CPAN/lib/";
 # then you can add the absolute paths to those modules below. You can list
 # as many directories as you want, separated by commas.
 
-# @localPerlLibPath = ( '/path/to/dir' );
+@localPerlLibPath = ('/var/www/twiki/lib/CPAN/lib/perl5/x86_64-linux-gnu-thread-multi/' );
 
 # http://www.perl.com/pub/a/2002/04/10/mod_perl.html?page=3 has good advice
 # on installing CPAN modules without superuser privileges.
