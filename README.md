@@ -7,12 +7,12 @@ external storage there ` -v /mnt/twiki:/data`
 
 The following environment variables are parsed and used at the moment
 
-   VAR         |    default            | description
-----------------------------------------------------------------
- ADMIN\_PW     | changeme              | Administrator Password 
- URL\_HOST     | http://localhost:80   | Full URL ( as received by the webserver )
- SCRIPT\_PATH  | /bin                  | URI Path to "bin"
- PUP\_PATH     | /pub                  | URI Path to "pub"
+|   VAR         |    default            | description            |
+|---------------|-----------------------|------------------------|
+| ADMIN\_PW     | changeme              | Administrator Password |
+| URL\_HOST     | http://localhost:80   | Full URL ( as received by the webserver ) |
+| SCRIPT\_PATH  | /bin                  | URI Path to "bin"      |
+| PUP\_PATH     | /pub                  | URI Path to "pub"      |
 
 
 ## Example
