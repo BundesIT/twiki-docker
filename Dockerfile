@@ -1,11 +1,12 @@
 FROM ubuntu:14.04
 MAINTAINER Thomas Berger <th.berger@it.piratenpartei.de>
 
+ENV TWIKI_VERSION 6.0.2
 
 RUN export DEBIAN_FRONTEND=noninteractive && apt-get update && apt-get -y dist-upgrade && apt-get -y install apache2 rcs diffutils zip cron make gcc g++ pkg-config libssl-dev
 
-ADD http://sourceforge.net/projects/twiki/files/TWiki%20for%20all%20Platforms/TWiki-6.0.0/TWiki-6.0.0.tgz/download ./TWiki-6.0.0.tgz
-RUN mkdir -p /var/www && tar xfv TWiki-6.0.0.tgz -C /var/www && rm TWiki-6.0.0.tgz
+ADD http://sourceforge.net/projects/twiki/files/TWiki%20for%20all%20Platforms/TWiki-${TWIKI_VERSION}/TWiki-${TWIKI_VERSION}.tgz/download ./TWiki-${TWIKI_VERSION}.tgz
+RUN mkdir -p /var/www && tar xfv TWiki-${TWIKI_VERSION}.tgz -C /var/www && rm TWiki-${TWIKI_VERSION}.tgz
 
 ADD perl/cpanfile /tmp/cpanfile
 ADD http://cpansearch.perl.org/src/THALJEF/Pinto-0.09995/etc/cpanm /tmp/cpanm
